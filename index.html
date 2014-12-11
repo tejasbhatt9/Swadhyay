@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en" ng-app>
+<head>
+  <script src="public/lib/angular/angular.min.js"></script>
+  <meta charset="UTF-8">
+  <title>Swadhyay</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <nav class="cf" ng-include="'nav.html'"></nav>
+</header>
+<div class="page">
+  <main class="cf">
+    <h1>Yo! {{name}}</h1>
+    <input ng-model="name" type="text" placeholder="Enter Your Name.."/>
+  </main>
+</div>
+</body>
+</html>
