@@ -4,3 +4,4 @@
 //ApplicationConfiguration.registerModule('core');
 
 
+var swadhyay = angular.module('Swadhyay',['ngRoute']);
