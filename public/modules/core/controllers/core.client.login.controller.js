@@ -4,6 +4,6 @@
 
 swadhyay.controller('core.client.login.controller',function($scope,$location){
     $scope.login = function(){
-        $location.path('/products')
+        $location.path('/products');
     }
 });

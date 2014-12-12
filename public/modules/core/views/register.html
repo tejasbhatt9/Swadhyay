@@ -1,3 +1,48 @@
-<h1>
-    <p>Register</p>
-</h1>
+<section class="register">
+    <form name="myForm"
+          ng-submit="register()" novalidate>
+        <h1>Register!</h1>
+        <p>Register to access all the features</p>
+
+        <input type="firstName" name="firstName" placeholder="First Name"
+               ng-model="user.firstName" ng-required="true" autofocus>
+        <p class="error validateonerror"
+           ng-show="myForm.firstName.$invalid && myForm.firstName.$touched">
+            First name is required
+        </p>
+
+        <input type="lastName" name="lastName" placeholder="Last Name"
+               ng-model="user.lastName" ng-required="true" autofocus>
+        <p class="error validateonerror"
+           ng-show="myForm.lastName.$invalid && myForm.lastName.$touched">
+            Last name is required
+        </p>
+
+        <input type="email" name="email" placeholder="Email"
+               ng-model="user.email" ng-required="true" autofocus>
+        <p class="error validateonerror"
+           ng-show="myForm.email.$invalid && myForm.email.$touched">
+            Email is required
+        </p>
+
+        <input type="password" name="password" placeholder="Password"
+               ng-model="user.password" ng-required="true">
+
+        <p class="error validateonerror"
+           ng-show="myForm.password.$invalid && myForm.password.$touched">
+            Password is required
+        </p>
+
+        <input type="confirmpassword" name="confirmpassword" placeholder="Confirm Password"
+               ng-model="user.password" ng-required="true">
+
+        <p class="error validateonerror"
+           ng-show="myForm.confirmpassword.$invalid && myForm.confirmpassword.$touched">
+            Confirm Password is required
+        </p>
+
+        <button type="submit" class="btn"
+                ng-disabled="myForm.$invalid">Register</button>
+    </form>
+    <p>or <a href="#/login">Login</a></p>
+</section>
